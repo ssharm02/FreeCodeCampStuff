@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Weather App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+</head>
+
+<!-- <script>
+    //palindrome test
+var x = "!@#!$sarthAK";
+var y = x.length -1;
+var z = x.replace(/[\W_]/g, '').toLowerCase();
+var a = "";
+console.log(x);
+console.log(y);
+console.log("value of z is " + z);
+for (var i = z.length -1; i >= 0; i--) {
+    a +=z[i];
+}//end of for loop
+if (z == a) {
+    console.log("The value you entered is a A palindrome");
+}
+else {
+    console.log("The value you entered is NOT a palindrome");
+}
+console.log(a);
+//end of palindrome test
+</script> -->
+
+<!-- <script>
+var longString = "Hello my name is Sarthak Sharma";
+var words = longString.split(' '); //split the 
+var maxLength = 0;
+var maxWord;
+//string array into seperate words 
+var x = longString.length; //variable gives total length of 
+//the string which is 31;
+for (var i = 0; i < words.length; i++) {
+    if(words[i].length > maxLength) {
+        //returns the length of the longest word
+        maxLength = words[i].length;
+        //returns the longest word
+        maxWord = words[i];
+    }
+}
+console.log("The longest word is " + maxLength + " value is " + maxWord);
+console.log(words);
+console.log(x);
+//for(var i = 0; i <= longString.length; i++) {
+
+//}
+
+</script> -->
+<!-- <script>
+var longString = "HERE IS MY HANDLE HERE IS MY SPOUT";
+var toLower = longString.toLowerCase();
+var strArray = toLower.split(' ');
+var firstChar = '';
+var firstToUpper;
+var complete;
+for (var i = 0; i < strArray.length; i++) {
+firstChar += strArray[i].charAt(0);
+firstToUpper = firstChar.toUpperCase().split('');
+strArray[i] = strArray[i].charAt(0).toUpperCase() + strArray[i].slice(1); //replace(strArray[i].charAt(0), firstToUpper);
+complete = strArray.join(' ');
+}//end of for loop
+console.log(strArray);
+console.log("Complete value is " + complete);
+// console.log("first character is " + firstChar);
+// console.log("First to upper case is " + firstToUpper);
+// console.log("Replaced character is " + replace);
+</script> -->
+<!-- <script>
+//Largest number in an array
+var arr = ([[10,20,30,40], [13,15,69,70], [34,77,55,22],[99,22,66,11]]);
+
+var arr2 = [12,55,77,88];
+var max3 = Math.max.apply(null, arr2);
+var maxNumber = [0,0,0,0];
+
+for (var larNumIndex = 0; larNumIndex < arr.length; larNumIndex++) {
+    for (var subIndex = 0; subIndex < arr[larNumIndex].length; subIndex++) {
+    //console.log(arr[larNumIndex]);
+    //console.log(arr[subIndex]);
+     if (arr[larNumIndex][subIndex] > maxNumber[larNumIndex]) {
+         maxNumber[larNumIndex] = arr[larNumIndex][subIndex];
+    }
+}
+}
+console.log("max number is " + maxNumber);
+console.log(max3);
+
+function maxArray(array)
+{
+    return array.map(function(subArray) {
+        return Math.max.apply(null, subArray);
+    });
+}
+console.log(maxArray([[10,20,30,40], [13,15,69,70], [34,77,55,22],[99,22,66,11]]));
+//console.log("max Array is " + maxArray);
+
+</script> -->
+<!-- 
+<script>
+var longString ="Bastian";
+var splitArr = longString.split(' ');
+var target = "Sathak Sharma is my name";
+var lastWord = '';
+var slice = longString.slice();
+var target2 = -target.length;
+var endsWith = longString.endsWith(); //returns boolean values
+for (var i = 0; i < splitArr.length; i++) {
+    lastWord = splitArr[i];
+// if (lastWord == target) {
+//     return true;
+// }
+// else {
+//     return false;
+// }
+}
+console.log("target 2 is " + target2);
+console.log("whats a slice " + slice);
+console.log("whats ends with " + endsWith);
+console.log(splitArr);
+console.log("last word in the array is " + lastWord);
+</script> -->
+<!-- <script>
+//repeat a string
+var string = "abc";
+var num = 3;
+
+for (var i = 1; i <= num; i++) {
+    string = string.concat(string);
+}
+console.log(num)
+console.log(string);
+
+</script> -->
+
+<!-- <script>
+//array splice
+var fruits = ["coconut", "apple", "bently", "horseradish", "mango"];
+var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+var temp = [];
+var size = 5;
+
+numbers.splice(0,size);
+
+// for(i=0;i<numbers.length;) {
+// temp.push(numbers.splice(i,size));
+// }//end of for loop
+console.log(numbers);
+
+//fruits.splice(2,0, "Dango","Kokango");
+//console.log(fruits);
+</script> -->
+
+<!-- <script>
+
+var fruits = [
+    { name : "mango", score:5},
+    { name : "blueberry", score: 3},
+    { name : "cherry", score: 1},
+    { name : "apple", score: 1},
+    { name : "melon", score: 7}
+
+];
+
+function setup() {
+
+    var sum = 0;
+    for (var i =0; i < fruits.length; i++) {
+        sum += fruits[i].score;
+    }
+    for (var i =0; i < fruits.length; i++) {
+         fruits[i].prob = fruits[i].score / sum;
+         fruits[i].count;
+    }
+
+    var melonCount = 0;
+for (var i = 0; i < 100; i++) {
+    var fruit = pickOne(fruits);
+    fruit.count++;
+    }
+}
+
+function pickOne(list) {
+    var index = 0;
+    var r = Math.random(1);
+
+    while (r > 0) {
+        r = r - list[index].prob;
+        index++;
+    }
+    index--;
+    return list[index];
+}
+</script> -->
+<!-- <script>
+
+function orbitalPeriod(array) {
+    var GM =398600.4418;
+    var earthRadius = 6367.4447;
+    for (var i = 0; i < array.length; i++) {
+    //forumla for orbital period
+    
+    var orbitalPer = Math.round(2*Math.PI*Math.sqrt(Math.pow(array[i].avgAlt +   earthRadius, 3)/GM));
+    delete array[i].orbitalPer;
+    array[i].orbitalPeriod = orbitalPer;
+    }
+    return array;
+}
+console.log(orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]));
+</script> -->
+
+<!-- <script>
+var mArray = ([1,3,6,8],[6,8,9,2]);
+
+for (var i =0; i <mArray.length; i++) {
+    for (var x = 0; x < mArray[i].length; x++) {
+        console.log("value of mArray " + mArray);
+        console.log("value of x " + x);
+    }
+}
+
+</script> -->
+<!-- <script>
+var matrix = [[0, 1, 1, 2], 
+          [0, 5, 0, 0], 
+          [2, 0, 3, 3]];
+          var total = 0;
+          var crap = [];
+for (var i= 0; i<matrix.length;i++){
+    for (var j = 0; j<matrix[i].length;j++) {
+        if(matrix[i][j]===0) {
+            crap.push(j);
+        }
+        else if(crap.indexOf(j)===-1) {
+            total += matrix[i][j];
+        }
+    }
+   // console.log(matrix[i]);
+}
+console.log(total);
+</script> -->
+<!-- <script>
+var string = "sarthak";
+var string2 = "";
+for (var i = string.length - 1; i >= 0; i--) {
+    console.log(string[i]);
+    string2 += string[i];
+}
+console.log("string2 is " + string2);
+</script> -->
+<!-- <script>
+//factoring a number
+var num = 5;
+var num2 = 0;
+for (var i = num; i >= num; i--){
+    num2 = num * i;
+}
+console.log("value of num2 is " + num2);
+</script> -->
+<!-- <script>
+//palindrome check
+var string = "eye";
+var string2 = "sarthak";
+var stringArray ="";
+for (var i = string.length -1; i >= 0; i--) {
+    stringArray += string[i];
+}
+    if (stringArray==string){
+        console.log(stringArray);
+        console.log("palindrome");
+    }
+    else {
+         console.log("not a palindrome"); 
+         console.log(stringArray);
+    }
+
+
+</script> -->
+<!-- <script>
+var str = "The quick brown fox jumped over the lazy dog";
+//find the longest word
+var wrdArray = str.split(' ');
+var maxword = 0;
+var word = '';
+//var spliceIt = wrdArray.splice(1);
+for (var i = 0; i < wrdArray.length; i++) {
+    if (wrdArray[i].length > maxword) {
+        maxword = wrdArray[i].length;
+        word = wrdArray[i];
+    }
+}
+//console.log(spliceIt);
+console.log(wrdArray);
+console.log("length of word is " + maxword + " word is " + word);
+</script> -->
+
+<!-- <script>
+//largest number in the array
+var largestOfFour= ([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]])
+var largeNumbers = [0,0,0,0];
+
+for (var i = 0; i < largestOfFour.length; i++) {
+    for (var j = 0; j < largestOfFour[i].length; j++) {
+        if(largestOfFour[i][j] > largeNumbers[i]) {
+            largeNumbers[i] = largestOfFour[i][j];
+        }
+    }
+}
+console.log(largeNumbers);
+</script> -->
+<!-- <script>
+    var str = "abcd";
+for (var i = 0; i < str.length; i++) {
+    var code = str.charCodeAt(i);
+    if (code !== str.charCodeAt(0) + i)
+    console.log(String.fromCharCode(code-1));
+}
+//from 
+</script> -->
+
+<!-- <script>
+
+    //reverse a string
+    var s = "Sarthak";
+    var wordAry = "";
+
+    for (var i = s.length -1; i >= 0; i--) {
+        wordAry += s[i]; //not s[i].length -> length gives number which we dont need 
+
+    }else 
+    console.log(wordAry);
+</script> -->
+
+<!-- <script>
+//factor a number    
+// var n = 5;
+// var factor = 1;
+//     // if (n === 0 || n === 1) {
+//     //     n = 1;
+//     // }
+//     while (n > 2) {
+//         factor = factor * n;
+//         n--;
+//     }
+// console.log(factor);
+
+function factor(num) {
+    if (num == 1 || num == 0) 
+        return 1;
+    
+    for (var i = num -1; i >= 1; i--)
+    num = num * i;  
+        return num;
+    
+}
+console.log(factor(10));
+</script> -->
+<!-- 
+<script>
+var x = "mom";
+var wordAry = "";
+
+for (var i = x.length -1; i >= 0; i--) {
+    wordAry += x[i];
+}
+if (x === wordAry) {
+    console.log("Word is palindrome");
+}
+else {
+    console.log("Word is not palindrome");
+}
+
+</script> -->
+<!-- <script>
+var x = "The quick brown fox jumped over the lazy dog";
+var split = x.split(' ');
+var max = 0;
+var word = "";
+for (var i = 0; i < split.length; i++) {
+if (split[i].length > max) {
+    max = split[i].length //the length of the word
+    word =split[i];//the word
+}
+}
+console.log(max);
+console.log(word);
+
+</script> -->
+<body>
+    <script>
+    //$(document).one("pagecreate",function(){
+        $( document ).ready(function(){
+         //Get user location once the website is launched
+        getUserLocation();
+        
+         var Coordinates = function(lat, lon) {
+           this.latitude = lat;
+           this.longitude = lon;
+       }
+         
+       //new Coordinates object
+       var coord = new Coordinates(0, 0);
+       
+       //function to the user's geolocation 
+       function getUserLocation() {
+           if (navigator.geolocation) 
+           {
+               navigator.geolocation.getCurrentPosition(showPosition); //, showErr);
+           }
+           else 
+           {
+               //This line isn't working do fix it
+               //$("#localWeather").append("Gelocation is not supported by this browser");
+               console.log("geolocation not supported")
+           }
+       }//end of getUserLocation function
+         
+         function showPosition(position) {
+           coord.latitude = position.coords.latitude;
+           coord.longitude = position.coords.longitude;
+         }
+         
+         function makeURL(lat, lon) {
+           var appid = '63a4a9aa94eafded1a87dd7216c409b1';
+           return  "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + appid;
+       }
+         
+         function getLocalWeather(data){
+             
+           var s = $("#localWeather");
+           s.empty();
+         var kelvinTemp = data.main.temp;
+         var celciusTemp = kelvinTemp - 273.15;
+         var description = data.weather[0].description;
+         var code = data.weather[0].icon;
+         var wspeed = data.wind.speed;
+         var city = data.name;
+         console.log(city);
+         var html = '<img src="https://openweathermap.org/img/w/' + code +
+           '.png" alt="Weather Icon" class="icon">' + '<p> ' + Math.round(celciusTemp) +
+           ', ' + description + '<br> Wind Speed: ' + wspeed + '</p><p>' +
+           city + '</p>';
+           $("#localWeather").append(html);
+       
+       }//end of getLocalWeather function
+         function callWeatherAPI() {
+           var url = makeURL(coord.latitude, coord.longitude);
+           $.getJSON(url, getLocalWeather);
+           //console.log("the url is " + url);
+           
+       }
+         function start() {
+           getUserLocation();
+           callWeatherAPI();
+         }
+       });
+    </script>
+       </body>
+</body>
+</html>

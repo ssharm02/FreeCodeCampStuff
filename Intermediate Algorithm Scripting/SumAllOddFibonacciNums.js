@@ -10,15 +10,29 @@ Sarthak Sharma ssharm02
 
 */
 function sumFibs(num) {
-  if (num === 0) {
-    return 0;
+  
+  var fibonacci = [1, 1];
+  
+  for (var i = 0; i <= num; i++) {
+    // calculate fibonacci number
+    var fibNum = fibonacci[i] + fibonacci[i+1];
+    // fibonacci number must be <= num
+    if (fibNum <= num) {
+      // push fibonacci number in array
+      fibonacci.push(fibNum);
+    } else {
+      // stop the loop
+      break;
+    }
   }
-  else if (num == 1) {
-    return 1;
-  }
-  else if ((num - 1) + (num -2)) {
-    return num;
-  }
-  return num;
+  
+  return fibonacci.filter(function(e) {
+    // filter only odd numbers
+    return e % 2 !== 0;
+  }).reduce(function(a, b) {
+    // sum all odd numbers
+    return a + b;
+  });
+  
 }
-
+}

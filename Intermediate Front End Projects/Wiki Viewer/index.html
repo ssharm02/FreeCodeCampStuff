@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+  <head>
+    <meta charset="utf-8">
+    <title>Sarthak's Wikipedia Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+</head>
+<body>
+  <div id="wrapper" class="container">
+    <header>  <h1 id="title" class="animate-bottom">Sarthak's Wikipedia Viewer</h1>  </header>
+    <main>
+      <div id="random">
+        <h4 id="random-cta">Random Wikipedia Articles</h4>
+        <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><span id="random-article">Click me for a random article</span></a>
+      </div> 
+      <div id="search">
+        <span id="search-icon">
+          <i class="fas fa-search icon"></i>
+        </span>
+        <form id="search-form">
+          <input id="search-input" type="text" name="search" placeholder="Search..">
+        </form>
+        <span id="search-exit">
+          <i id="search-exit-icon" class="fas fa-times icon"></i>
+        </span>
+      </div>
+      <div id="articles" class="container">
+        <ul id="article-list" class="animate-bottom border-color" type="none">
+          <a class="article-link" target="_blank">
+            <li id="article-one">
+              <p class="article-title"></p>
+              <p class="article-description"></p>
+            </li>
+          </a>
+          <a class="article-link" target="_blank">
+            <li id="article-two">
+              <p class="article-title"></p>
+              <p class="article-description"></p>
+            </li>
+          </a>
+          <a class="article-link" target="_blank">
+            <li id="article-three">
+              <p class="article-title"></p>
+              <p class="article-description"></p>
+            </li>
+          </a>
+          <a class="article-link" target="_blank">
+            <li id="article-four">
+              <p class="article-title"></p>
+              <p class="article-description"></p>
+            </li>
+          </a>
+          <a class="article-link" target="_blank">
+            <li id="article-five">
+              <p class="article-title"></p>
+              <p class="article-description"></p>
+            </li>
+          </a>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </main>
+    <footer> 
+      <span>Coded by <a href="https://www.linkedin.com/in/sarthak-sharma-07832052/" target="_blank"><span>Sarthak Sharma</span></a></span>
+    </footer>
+  </div>
+</body>
+</html>

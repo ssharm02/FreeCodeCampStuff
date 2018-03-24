@@ -16,6 +16,4 @@ Geolocation based weather application, displays weather data based on user's lon
 # WikiViewerFCC
 
 Simple Wikipedia viewer made for Free Code Camp, connects to wikipedia API, click search icon to begin search, top 5 results are displayed.  
-![alt text](https://i.imgur.com/p8pPOmE.png)
-Click x to reset and search again
-![alt text](https://i.imgur.com/wkoOP65.png)
+![alt text](https://i.imgur.com/25qL5nk.gif)

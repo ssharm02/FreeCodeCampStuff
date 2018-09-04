@@ -111,3 +111,57 @@ function htmlColorNames(arr) {
 console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurqoise', 'FireBrick']));
 
 //Array.slice copying array items
+function forecast(arr) {
+  // change code below this line
+  let betterWeather = arr.slice(2,4);
+  console.log(betterWeather)
+  return betterWeather;
+}
+
+// do not change code below this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+//ES6 spread operator
+function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+    // change code below this line
+  newArr.push([...arr]);
+    // change code above this line
+    num--;
+  }
+  return newArr;
+}
+
+// change code here to test different cases:
+console.log(copyMachine([true, false, true], 2));
+
+//check presence of element using indexOf
+function quickCheck(arr, elem) {
+  // change code below this line
+if (arr.indexOf(elem) >= 0) {
+  return true;
+}
+return false;
+  // change code above this line
+}
+
+// change code here to test different cases:
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+console.log(quickCheck(["squash", "onions", "shallots"], "onions"));
+console.log(quickCheck([3, 5, 9, 125, 45, 2], 125));
+
+function filteredArray(arr, elem) {
+  let newArr = [];
+  // change code below this line
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].indexOf(elem) === -1) {
+      newArr.push(arr[i]);
+    }
+  }
+  // change code above this line
+  return newArr;
+}
+
+// change code here to test different cases:
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));

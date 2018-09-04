@@ -165,3 +165,83 @@ function filteredArray(arr, elem) {
 
 // change code here to test different cases:
 console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28
+};
+
+// change code below this line
+Object.assign(foods, {
+bananas: 13,
+grapes: 35,
+strawberries: 27
+});
+// change code above this line
+
+console.log(foods);
+
+let userActivity = {
+  id: 23894201352,
+  date: 'January 1, 2017',
+  data: {
+    totalUsers: 51,
+    online: 42
+  }
+};
+
+// change code below this line
+userActivity.data.online = 45;
+// change code above this line
+
+console.log(userActivity);
+
+//access property naame with bracket notation
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+// do not change code above this line
+
+function checkInventory(scannedItem) {
+  // change code below this line
+  return foods[scannedItem];
+}
+
+// change code below this line to test different cases:
+console.log(checkInventory("apples"));
+
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function isEveryoneHere(obj) {
+  // change code below this line
+if (users.hasOwnProperty('Alan', 'Jeff', 'Sarah', 'Ryan') == true) {
+  return true;
+} 
+return false;
+  // change code above this line
+}
+
+console.log(isEveryoneHere(users));

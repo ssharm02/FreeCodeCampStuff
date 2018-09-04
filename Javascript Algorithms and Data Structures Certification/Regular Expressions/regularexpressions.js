@@ -172,3 +172,28 @@ let result = timRegex.test(timStr);
 let favWord = "favorite";
 let favRegex = /favou?rite/; // Change this line
 let result = favRegex.test(favWord);
+
+let password = "abc123";
+let checkPass = /(?=\w{3,6})(?=\D*\d)/;
+checkPass.test(password); // Returns true
+
+//positive lookahaead
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{5,})(?=\D*\d+)/g; // Change this line
+let result = pwRegex.test(sampleWord);
+
+//capture group
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
+let result = reRegex.test(repeatNum);
+
+//search and replace
+let huhText = "This sandwich is good.";
+let fixRegex = /good/; // Change this line
+let replaceText = "okey-dokey"; // Change this line
+let result = huhText.replace(fixRegex, replaceText);
+
+//replace whitespace from start and end
+let hello = "   Hello, World!  ";
+let wsRegex = /\S.*\S/; // Change this line
+let result = hello.match(wsRegex); // Change this line

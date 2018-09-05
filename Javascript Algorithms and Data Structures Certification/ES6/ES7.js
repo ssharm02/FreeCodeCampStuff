@@ -113,3 +113,28 @@ const increment = (function() {
   })();
   console.log(increment(5, 2)); // returns 7
   console.log(increment(5)); // returns NaN
+
+  function sum(...args) {
+    const sum = [];
+    sum[0] = 0;
+    for(let i = 0; i < args.length; i++){
+      sum[0] += args[i]; 
+    }
+    return sum[0];
+  };
+console.log(sum(1, 2, 3)); // 6
+
+//better method for using spread operator
+const sum = function sum(...args ) {
+    return args.reduce((a, b) => a + b, 0);
+  };
+console.log(sum(1, 2, 3)); // 6
+
+// Use the spread operator to evalue arrays in place
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+(function() {
+  "use strict";
+  arr2 = [...arr1]; // change this line
+})();
+console.log(arr2);

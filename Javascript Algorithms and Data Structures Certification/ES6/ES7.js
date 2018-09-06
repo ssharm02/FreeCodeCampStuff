@@ -138,3 +138,42 @@ let arr2;
   arr2 = [...arr1]; // change this line
 })();
 console.log(arr2);
+
+//Use Destructuring Assignment to Assign variables from objects
+function getLength(str) {
+  "use strict";
+
+  // change code below this line
+    const {length : len} = str// change this
+    console.log(str)
+    console.log(len)
+  // change code above this line
+
+  return len; // you must assign length to len in line
+
+}
+
+console.log(getLength('FreeCodeCamp'));
+
+//Destructuring assignment to assign variables from nested objects
+function getMaxOfTmrw(forecast) {
+  "use strict";
+  // change code below this line
+  const {tomorrow : {max: maxOfTomorrow}} = forecast; // change this line
+  console.log(maxOfTomorrow);
+  // change code above this line
+  return maxOfTomorrow;
+}
+
+console.log(getMaxOfTmrw(LOCAL_FORECAST)); // should be 84.6
+
+//Use Destructing assignment to assign variables from arrays
+let a = 8, b = 6;
+(() => {
+  "use strict";
+  // change code below this line
+ [b, a] = [a, b];
+  // change code above this line
+})();
+console.log(a); // should be 6
+console.log(b); // should be 8

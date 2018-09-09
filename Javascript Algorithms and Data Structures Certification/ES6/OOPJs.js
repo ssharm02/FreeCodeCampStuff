@@ -93,4 +93,38 @@ function House(numBedrooms) {
       ownProps.push(property);
     }
   }
+  //Use Prototype Properties to Reduce Duplicate Code
+  //A better way is to use Bird’s prototype. 
+  //The prototype is an object that is shared among ALL instances of Bird
+  function Dog(name) {
+    this.name = name;
+  }
+  
+  
+  Dog.prototype.numLegs = 4;
+  // Add your code above this line
+  let beagle = new Dog("Snoopy");
+
+  //Iterate over all properties both OWN and Prototypes
+  function Dog(name) {
+    this.name = name;
+  }
+  
+  Dog.prototype.numLegs = 4;
+  
+  let beagle = new Dog("Snoopy");
+  
+  let ownProps = [];
+  let prototypeProps = [];
+  
+  // Add your code below this line 
+  for (let property in beagle) {
+    if (beagle.hasOwnProperty(property)) {
+      ownProps.push(property);
+    } else {
+      prototypeProps.push(property);
+    }
+  }
+  
+
   

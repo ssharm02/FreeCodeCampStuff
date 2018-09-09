@@ -126,5 +126,77 @@ function House(numBedrooms) {
     }
   }
   
-
+//Understand constructor property
+function Dog(name) {
+    this.name = name;
+  }
   
+  // Add your code below this line
+  function joinDogFraternity(candidate) {
+    if (candidate.constructor === Dog) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  //Change prototype to a new object
+  Bird.prototype = {
+    numLegs: 2, 
+    eat: function() {
+      console.log("nom nom nom");
+    },
+    describe: function() {
+      console.log("My name is " + this.name);
+    }
+  };
+
+  function Dog(name) {
+    this.name = name; 
+  }
+  
+  Dog.prototype = {
+    // Add your code below this line
+    numLegs: 4,
+    eat: function() {},
+    describe: function() {}
+  };
+
+  //Remember to Set the Constructor Property when Changing the Prototype
+  function Dog(name) {
+    this.name = name; 
+  }
+  
+  // Modify the code below this line
+  Dog.prototype = {
+    constructor: Dog,
+    numLegs: 2, 
+    eat: function() {
+      console.log("nom nom nom"); 
+    }, 
+    describe: function() {
+      console.log("My name is " + this.name); 
+    }
+  };
+
+  //Understand Where an Object’s Prototype Comes From
+  function Dog(name) {
+    this.name = name;
+  }
+  
+  let beagle = new Dog("Snoopy");
+  
+  // Add your code below this line
+  
+  Dog.prototype.isPrototypeOf(beagle);
+
+  //Understand the Prototype Chain
+  function Dog(name) {
+    this.name = name;
+  }
+  
+  let beagle = new Dog("Snoopy");
+  
+  Dog.prototype.isPrototypeOf(beagle);  // => true
+  
+  // Fix the code below so that it evaluates to true
+  Object.prototype.isPrototypeOf(Dog.prototype);

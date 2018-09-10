@@ -168,3 +168,126 @@ const defaultState = {
       type: 'LOGOUT'
     }
   };
+
+/*
+  Redux: Use const for Action Types
+A common practice when working with Redux is to assign action types as read-only constants, then reference these constants wherever they are used. You can refactor the code you're working with to write the action types as const declarations.
+
+
+Declare LOGIN and LOGOUT as const values and assign them to the strings 'LOGIN' and 'LOGOUT', respectively. Then, edit the authReducer() and the action creators to reference these constants instead of string values.
+
+Note: It's generally a convention to write constants in all uppercase, and this is standard practice in Redux as well.
+*/
+// change code below this line
+const LOGIN = 'LOGIN';
+const LOGOUT = 'LOGOUT';
+// change code above this line
+
+const defaultState = {
+  authenticated: false
+};
+// Reducer
+const authReducer = (state = defaultState, action) => {
+
+  switch (action.type) {
+
+    case LOGIN:
+      return {
+        authenticated: true
+      }
+
+    case LOGOUT:
+      return {
+        authenticated: false
+      }
+
+    default:
+      return state;
+
+  }
+
+};
+//Actions
+const store = Redux.createStore(authReducer);
+
+const loginUser = () => {
+  return {
+    type: LOGIN
+  }
+};
+
+const logoutUser = () => {
+  return {
+    type: LOGOUT
+  }
+};
+/*
+Redux: Register a Store Listener
+Another method you have access to on the Redux store object is store.subscribe(). This allows you to subscribe listener functions to the store, which are called whenever an action is dispatched against the store. One simple use for this method is to subscribe a function to your store that simply logs a message every time an action is received and the store is updated.
+
+
+Write a callback function that increments the global variable count every time the store receives an action, and pass this function in to the store.subscribe() method. You'll see that store.dispatch() is called three times in a row, each time directly passing in an action object. Watch the console output between the action dispatches to see the updates take place.
+*/
+
+const ADD = 'ADD';
+
+const reducer = (state = 0, action) => {
+  switch(action.type) {
+    case ADD:
+      return state + 1;
+    default:
+      return state;
+  }
+};
+
+const store = Redux.createStore(reducer);
+
+// global count variable:
+let count = 0;
+
+// change code below this line
+store.subscribe( () => {count++} );
+// change code above this line
+
+store.dispatch({type: ADD});
+console.log(count);
+store.dispatch({type: ADD});
+console.log(count);
+store.dispatch({type: ADD});
+console.log(count);
+
+/*
+Redux: Send Action Data to the Store
+By now you've learned how to dispatch actions to the Redux store, but so far these actions have not contained any information other than a type. You can also send specific data along with your actions. In fact, this is very common because actions usually originate from some user interaction and tend to carry some data with them. The Redux store often needs to know about this data.
+
+
+There's a basic notesReducer() and an addNoteText() action creator defined in the code editor. Finish the body of the addNoteText() function so that it returns an action object. The object should include a type property with a value of ADD_NOTE, and also a text property set to the note data that's passed into the action creator. When you call the action creator, you'll pass in specific note information that you can access for the object.
+
+Next, finish writing the switch statement in the notesReducer(). You need to add a case that handles the addNoteText() actions. This case should be triggered whenever there is an action of type ADD_NOTE and it should return the text property on the incoming action as the new state.
+
+The action is dispatched at the bottom of the code. Once you're finished, run the code and watch the console. That's all it takes to send action-specific data to the store and use it when you update store state.
+*/
+
+const ADD_NOTE = 'ADD_NOTE';
+
+const notesReducer = (state = 'Initial State', action) => {
+  switch(action.type) {
+    // change code below this line
+
+    // change code above this line
+    default:
+      return state;
+  }
+};
+
+const addNoteText = (note) => {
+  // change code below this line
+
+  // change code above this line
+};
+
+const store = Redux.createStore(notesReducer);
+
+console.log(store.getState());
+store.dispatch(addNoteText('Hello!'));
+console.log(store.getState());

@@ -229,3 +229,201 @@ class ResetPassword extends React.Component {
     );
   }
 };
+
+/*
+  React: Review Using Props with Stateless Functional Components
+*/
+
+class CampSite extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <Camper/>
+      </div>
+    );
+  }
+};
+// change code below this line
+const Camper = (props) => <p>{props.name}</p>
+
+Camper.defaultProps = {name: 'CamperBot'};  
+Camper.propTypes = { name: PropTypes.string.isRequired }
+
+/*
+The code editor has a CampSite component that renders a Camper component as a child. 
+Define the Camper component and assign it default props of { name: 'CamperBot' }. 
+Inside the Camper component, render any code that you want, but make sure to have one p 
+element that includes only the name value that is passed in as a prop. Finally, define 
+propTypes on the Camper component to require name to be provided as a prop and 
+verify that it is of type string.
+*/
+
+class CampSite extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <Camper />
+      </div>
+    );
+  }
+};
+// change code below this line
+const Camper = (props) => {
+  return (
+    <p>{props.name}</p>
+  );
+};
+
+Camper.defaultProps = { name: 'CamperBot' };
+
+Camper.propTypes = {name: PropTypes.string.isRequired}
+
+
+/*
+You create state in a React component by declaring a state property on the component class in its constructor. This initializes
+ the component with state when it is created. 
+ The state property must be set to a JavaScript object. Declaring it looks like this:
+*/
+
+class StatefulComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    // initialize state here
+  this.state = {
+    name: ''
+  }
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.name}</h1>
+      </div>
+    );
+  }
+};
+
+/*
+React: Render State in the User Interface
+Once you define a component's initial state, you can display any part of it in the UI that is rendered. If a component is 
+stateful, it will always have access to the data in state in its render() method. You can access the data with this.state.
+
+*/
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'freeCodeCamp'
+    }
+  }
+  render() {
+    return (
+      <div>
+        { /* change code below this line */ }
+        <h1>{this.state.name}</h1>
+        { /* change code above this line */ }
+      </div>
+    );
+  }
+};
+
+/*
+React: Render State in the User Interface Another Way
+There is another way to access state in a component. In the render() method, before the return 
+statement, you can write JavaScript directly. For example, you could declare functions, access data from state or props, perform computations on this data, and so on. 
+Then, you can assign any data to variables, which you have access to in the return statement.
+*/
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'freeCodeCamp'
+    }
+  }
+  render() {
+    // change code below this line
+  var name=this.state.name;
+    // change code above this line
+    return (
+      <div>
+        { /* change code below this line */ }
+        <h1>{name}</h1>
+        { /* change code above this line */ }
+      </div>
+    );
+  }
+};
+
+/*
+React: Set State with this.setState
+The previous challenges covered component state and how to initialize state in the constructor. 
+There is also a way to change the component's state. React provides a method for updating component state called setState. 
+You call the setState method within your component class like so: this.setState(), passing in an object with key-value pairs. 
+The keys are your state properties and the values are the updated state data. For instance, if we were storing a username in state and wanted to update it, it would look like this:
+*/
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'Initial State'
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    // change code below this line
+  this.setState({name: "React Rocks!"})
+    // change code above this line
+  }
+  render() {
+    return (
+      <div>
+        <button onClick={this.handleClick}>Click Me</button>
+        <h1>{this.state.name}</h1>
+      </div>
+    );
+  }
+};
+
+/*
+React: Bind 'this' to a Class Method
+In addition to setting and updating state, you can also define methods for your component class. A class method typically needs to use the this keyword so it can access properties on the class (such as state and props) inside the scope of the method. There are a few ways to allow your class methods to access this.
+
+One common way is to explicitly bind this in the constructor so this becomes bound to the class methods when the component is initialized. You may have noticed the last challenge used this.handleClick = this.handleClick.bind(this) for its handleClick method in the constructor. Then, when you call a function like this.setState() within your class method, this refers to the class and will not be undefined.
+
+Note: The this keyword is one of the most confusing aspects of JavaScript but it plays an important role in React. Although its behavior here is totally normal, these lessons aren't the place for an in-depth review of this so please refer to other lessons if the above is confusing!
+*/
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      itemCount: 0
+    };
+    // change code below this line
+this.addItem = this.addItem.bind(this);
+    // change code above this line
+  }
+addItem() {
+    this.setState({
+      itemCount: this.state.itemCount + 1
+    });
+  }
+  render() {
+    return (
+      <div>
+        { /* change code below this line */ }
+        <button onClick={this.addItem}>Click Me</button>
+        { /* change code above this line */ }
+        <h1>Current Item Count: {this.state.itemCount}</h1>
+      </div>
+    );
+  }
+};

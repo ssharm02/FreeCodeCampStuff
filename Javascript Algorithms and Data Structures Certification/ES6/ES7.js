@@ -191,3 +191,41 @@ function getTempOfTmrw(avgTemperatures) {
 }
 
 console.log(getTempOfTmrw(AVG_TEMPERATURES)); // should be 79
+
+function makeClass() {
+  "use strict";
+  /* Alter code below this line */
+class Vegetable {
+  constructor(name) {
+  this.name = name;
+  }
+}
+  /* Alter code above this line */
+  return Vegetable;
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // => should be 'carrot'
+
+//Getters and Setters in JavaScript
+function makeClass() {
+  "use strict";
+  /* Alter code below this line */
+class Thermostat {
+  constructor(temperature) {
+    this._temperature = temperature;
+  }
+  get temperature() {
+    return 5/9 * (this._temperature - 32);
+  }
+  set temperature(tempCels) {
+    this._temperature = tempCels * 9 / 5 + 32;
+  }
+}
+return Thermostat;
+}
+const Thermostat = makeClass();
+const thermos = new Thermostat(76); // setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in C
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in C

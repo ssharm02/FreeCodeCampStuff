@@ -221,3 +221,14 @@ let example = { hello: 'World', bye: 'Wow', test: {example2: 'example3'} }
 let y = Object.keys(example)
 
 console.log(y)
+//Objects hasOwnProperty
+
+let example = { hello: 'World', bye: 'Wow', test: {example2: 'example3'} }
+let y = example.hasOwnProperty(('test'))
+
+console.log(y)
+//Objects values
+let example = { hello: 'World', bye: 'Wow', test: {example2: 'example3'} }
+let y = Object.values(example)
+
+console.log(y)

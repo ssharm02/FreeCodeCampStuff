@@ -190,3 +190,34 @@ let example = [1,102,3,4,5,6,5 ,7,8,4];
 let bobo = example.unshift(0);
 
 console.log(example)
+
+//terinanary operator
+function someStuff(a, b) {
+    let example = a > b ? 'a' : 'b';
+    return example;    
+    //return (2+2===4) ? 'Hello World' : 'hello Yo';
+    }
+    console.log(someStuff(10, 2))
+
+    //JavaScript Object.assign
+    //Objects Assign
+
+let example = { hello: 'World', bye: 'Wow' }
+let example2 = Object.assign({}, example)
+example2.hello = 'Today'
+console.log(example)
+console.log(example2)
+
+//Objects KEy value pair
+
+let example = { hello: 'World', bye: 'Wow', test: {example2: 'example3'} }
+let y = Object.entries(example)
+
+console.log(y)
+
+//Objects keys
+
+let example = { hello: 'World', bye: 'Wow', test: {example2: 'example3'} }
+let y = Object.keys(example)
+
+console.log(y)

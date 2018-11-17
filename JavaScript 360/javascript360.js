@@ -164,3 +164,29 @@ let example = [1,2,3,4,5,6,5 ,7,8,4];
 let example2 = example.slice(2,4);
 
 console.log(example2)
+
+//Array some
+let example = [1,2,3,4,5,6,5 ,7,8,4].some((element)=> {
+    return element > 5;
+})
+console.log(example)
+
+//Array Sort
+let example = [1,102,3,4,5,6,5 ,7,8,4].sort((a,b)=> {
+    return a - b;
+})
+
+console.log(example)
+
+//Array String
+let example = [1,102,3,4,5,6,5 ,7,8,4];
+
+let bobo = example.toString();
+
+console.log(bobo)
+//Array Unshift
+let example = [1,102,3,4,5,6,5 ,7,8,4];
+
+let bobo = example.unshift(0);
+
+console.log(example)

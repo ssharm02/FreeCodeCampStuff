@@ -232,3 +232,87 @@ let example = { hello: 'World', bye: 'Wow', test: {example2: 'example3'} }
 let y = Object.values(example)
 
 console.log(y)
+
+const notes =  
+[ {}, {
+    title: 'My next trip',
+    body: 'Going to Japan'
+}, {
+    title: 'Code More',
+    body: 'Code more in Javascript'
+}, {
+    title: 'Talk to more girls',
+    body: 'Starting dating women'
+}]
+
+// console.log({} === {})
+
+// const index = notes.findIndex((notes, index) => {
+//     return notes.title === 'My next trip'
+// })
+
+// console.log(index)
+
+const findNote = function (notes, noteTitle) {
+    const index = notes.findIndex((notes, index)=> {
+        return notes.title=== noteTitle;
+    })
+    return notes[index];
+}
+
+const note = findNote(notes, 'Code More');
+console.log(note)
+
+
+const findNote = function (notes, noteTitle) {
+    const note = notes.find((notes, index)=> {
+        return notes.title=== noteTitle;
+    })
+    return notes;
+}
+
+const note = findNote(notes, 'Code More');
+console.log(note)
+
+const favFood = ['Pizza', 'fires', 'chow mein', 'swedish meatballs'];
+
+let testArray = [];
+
+testArray = [...favFood];
+
+console.log(testArray)
+
+const toolBox = ['hammer', 'screwdriver', 'ruler'];
+
+for (const item in toolBox) {
+    console.log(item)
+}
+const findToold = toolBox.includes('hammer');
+console.log(findToold)
+
+const age = [16, 14, 18, 20];
+
+const greatage = age.some(function(person) {
+    
+    return person >= 10;
+})
+
+console.log(greatage)
+
+const prices = [24, 25, 38, 46, 34, 32];
+
+const stuff = prices.filter((price) => price >= 30);
+
+console.log(stuff)
+
+const priceList = [200, 300, 350, 450, 5000];
+
+const modifyPrice = priceList.map((item) => item * .75);
+
+console.log(modifyPrice);
+
+const weeklyExpense = [300,400,500,145,234,55];
+
+const test3 = weeklyExpense.reduce((first, last) => first + last);
+
+console.log(test3)

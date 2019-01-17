@@ -163,3 +163,32 @@ promise.then(function(data) {
 }).then(function(data){
     console.log(data)
 })
+
+//
+let john = {
+    fullName: "Sarthak Sharma",
+    bills: [124, 55, 67, 33, 33],
+    calcTips: function() {
+        this.tips = [];
+        this.finalBill = [];
+
+        for (let i = 0; i < this.bills.length; i++) {
+
+            let percentage;
+            let bill = this.bills[i];
+            if (bill < 50) {
+                percentage = .2;
+            } else if (bill >= 50 && bill < 200) {
+                percentage = .15;
+            } else {
+                percengae = .1;
+            }
+            this.tips[i] = bill * percentage;
+            this.finalBill[i] = bill + bill * percentage;
+        }
+    }
+}
+
+john.calcTips();
+
+console.log(john)

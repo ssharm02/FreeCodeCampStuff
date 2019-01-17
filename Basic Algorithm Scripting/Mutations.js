@@ -8,17 +8,17 @@ Lastly, ["Alien", "line"], should return true because all of the letters in "lin
 
 Coded by Sarthak Sharma ssharm02
 */
-
 function mutation(arr) {
   //Create test Array - takes the 1st element of the arr and turns it to lower case
-  var test = arr[1].toLowerCase();
+  let firstWord = arr[1].toLowerCase();
   //Create Target Array - takes the 0th element of the arr and turns it to lower case
-  var target = arr[0].toLowerCase();
+  let target = arr[0].toLowerCase();
   //Use for loop to go through test string
-  for (i=0; i<test.length; i++) { 
-    //if the target doesn't contain all characters return flase otherwise return true 
-    if (target.indexOf(test[i]) === -1)
-      return false;
+  for (let i = 0; i < firstWord.length; i++) {
+    //if the target doesn't contain all characters return flase otherwise return true
+    if (target.indexOf(firstWord[i]) === -1) return false;
   }
   return true;
 }
+
+console.log(mutation(["hey", "HEY"]));

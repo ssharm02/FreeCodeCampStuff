@@ -14,24 +14,20 @@ Sarthak Sharma ssharm02
 */
 
 function palindrome(str) {
-  //remove garbage characters from string using regular expression      and turn string to lower case 
-  var toLower = str.replace(/[\W_]/g, '').toLowerCase();
+  //remove garbage characters from string using regular expression      and turn string to lower case
+  let toLower = str.replace(/[\W_]/g, "").toLowerCase();
   //create an empty variable that will store the reversed string
-  var stringArray = "";
+  let stringArray = "";
+  //value returns true or false
+  let boolVal;
   //for loop starts with the last character of string and decrements to first character
-    for (var i = toLower.length - 1; i >= 0; i--) 
-    {
+  for (let i = toLower.length - 1; i >= 0; i--) {
     //characters in reverse are placed in the stringArray variable
-      stringArray += toLower[i];
-    }
-    //simple if else statement if the reverse word matches the string 
-    // it is a palindrome other wise its not :D
-    if (toLower == stringArray) 
-    {
-     return true;
-    }
-    else 
-   {
-    return false;
-    }
+    stringArray += toLower[i];
+  }
+  boolVal = toLower === stringArray ? true : false;
+
+  return boolVal;
 }
+
+console.log(palindrome("eye"));

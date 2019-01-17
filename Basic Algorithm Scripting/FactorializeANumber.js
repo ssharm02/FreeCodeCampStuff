@@ -11,15 +11,32 @@ Sarthak Sharma ssharm02
 */
 
 function factorialize(num) {
-   if (num == 1 || num == 0) 
-   return 1;
-  
-  //getting a factorial using for loop
-  //start with a number and decrement it using for loop
-  //inside the for loop multiply the number as it decrements
-  for (var i = num -1; i >= 1; i--)
-    num = num * i;  
-  
+  if (num === 1 || num === 0) {
+    return 1;
+  }
+
+  //use the for loop - subtract -1 and go all the way until it equals 1
+  for (let i = num - 1; i >= 1; i--) {
+    num = num * i;
+  }
   ////geting a factorial using recursion
-  return num;//(num*factorialize(num-1));
+  return num; //(num*factorialize(num-1));
 }
+console.log(factorialize(5));
+
+//Use while loop
+function factor2(num) {
+  if (num === 1 || num === 0) {
+    return 1;
+  }
+  while (num >= 1) {
+    num--;
+    num = num * num;
+  }
+  return num;
+}
+
+console.log(factor2(5));
+
+//es6 syntax
+const factorial = (x, acum = 1) => (x ? factorial(x - 1, x * acum) : acum);

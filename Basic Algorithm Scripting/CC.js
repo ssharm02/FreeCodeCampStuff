@@ -10,22 +10,23 @@ Sarthak Sharma ssharm02
 
 */
 //Function rot13 takes in a string parameter
-function rot13(str) { // LBH QVQ VG!
-//Set number variable shifting characters
-var num = 0;
-//New variable cyphyerString will hold the new shifted cipher strings
-var cypherString = "";
-//For loop goes through the string
-  for (var i =0; i < str.length; i++) {
-   //ASCI value for the first character of the string
+function rot13(str) {
+  // LBH QVQ VG!
+  //Set number variable shifting characters
+  let num = 0;
+  //New variable cyphyerString will hold the new shifted cipher strings
+  let cypherString = "";
+  //For loop goes through the string
+  for (let i = 0; i < str.length; i++) {
+    //ASCI value for the first character of the string
     num = str.charCodeAt(i);
+
     if (num >= 65) {
       //if ASCI value of the character is >= 65 shift by 13 characters
       num += 13;
     }
     //if less then 90 shift back by 26
-    if (num > 90) 
-    {
+    if (num > 90) {
       num -= 26;
     }
     //Put the new shifted cypher string in the cypherString Variable
@@ -33,3 +34,5 @@ var cypherString = "";
   }
   return cypherString;
 }
+
+console.log(rot13("abc"));

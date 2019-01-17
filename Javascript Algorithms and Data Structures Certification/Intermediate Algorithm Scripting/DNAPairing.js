@@ -16,30 +16,22 @@ Sarthak Sharma ssharm02
 
 function pairElement(str) {
   //Split each word of the string
-  var splitArray = str.split('');
+  let splitArray = str.split("");
   //Create an empty array variable
-  var emptyArray = [];
+  let emptyArray = [];
   //Cycle through the entire word
-  for (var i =0; i <splitArray.length; i++) 
-  {
+  for (let i = 0; i < splitArray.length; i++) {
     //if word is G, push G and C in to empty array etc
-    if(splitArray[i]==='G') 
-    {
-      emptyArray.push(['G','C']);
-    }
-    else if(splitArray[i]==="C")
-    {
-      emptyArray.push(["C","G"]);
-    }
-    else if(splitArray[i]==="A")
-    {
-      emptyArray.push(["A","T"]);
-    }
-    else 
-    {
-      emptyArray.push(["T","A"]);
+    if (splitArray[i] === "G") {
+      emptyArray.push(["G", "C"]);
+    } else if (splitArray[i] === "C") {
+      emptyArray.push(["C", "G"]);
+    } else if (splitArray[i] === "A") {
+      emptyArray.push(["A", "T"]);
+    } else {
+      emptyArray.push(["T", "A"]);
     }
   }
-  //Return the array which has DNA 
-    return emptyArray;
-  }
+  //Return the array which has DNA
+  return emptyArray;
+}

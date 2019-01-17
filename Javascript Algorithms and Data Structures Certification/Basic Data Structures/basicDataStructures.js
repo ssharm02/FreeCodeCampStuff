@@ -1,82 +1,79 @@
-let myNestedArray = [ //level 1
-    // change code below this line
-    ['unshift', false, 1, 2, 3, 'complex', 'nested'], //level 2
-    [ 
-      ['loop', 'shift', 6, 7, 1000, 'method', 'deep'], //level 3
-      [ 
-        ['concat', false, true, 'deeper', 'spread', 'array'], //level 4
-        [
-          ['deepest', 'mutate', 1327.98, 'splice', 'slice', 'push'] //level 5
-        ]
+let myNestedArray = [
+  //level 1
+  // change code below this line
+  ["unshift", false, 1, 2, 3, "complex", "nested"], //level 2
+  [
+    ["loop", "shift", 6, 7, 1000, "method", "deep"], //level 3
+    [
+      ["concat", false, true, "deeper", "spread", "array"], //level 4
+      [
+        ["deepest", "mutate", 1327.98, "splice", "slice", "push"] //level 5
       ]
-    ],
-    ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth']
+    ]
+  ],
+  ["iterate", 1.3849, 7, "8.4876", "arbitrary", "depth"]
 ];
 
 let user = {
-    name: 'Kenneth',
-    age: 28,
-    data: {
-      username: 'kennethCodesAllDay',
-      joinDate: 'March 26, 2016',
-      organization: 'freeCodeCamp',
-      friends: [
-        'Sam',
-        'Kira',
-        'Tomo'
-      ],
-      location: {
-        city: 'San Francisco',
-        state: 'CA',
-        country: 'USA'
-      }
+  name: "Kenneth",
+  age: 28,
+  data: {
+    username: "kennethCodesAllDay",
+    joinDate: "March 26, 2016",
+    organization: "freeCodeCamp",
+    friends: ["Sam", "Kira", "Tomo"],
+    location: {
+      city: "San Francisco",
+      state: "CA",
+      country: "USA"
     }
-  };
-  
-  function addFriend(userObj, friend) {
-    userObj.data.friends.push(friend);
-    // change code below this line  
+  }
+};
+
+function addFriend(userObj, friend) {
+  userObj.data.friends.push(friend);
+  // change code below this line
   return user.data.friends;
-    // change code above this line
-  }
-  
-  console.log(addFriend(user, 'Pete'));
+  // change code above this line
+}
 
-  function frankenSplice(arr1, arr2, n) {
-    // It's alive. It's alive!
-  var splitA = arr2.slice(0,n);
-  
+console.log(addFriend(user, "Pete"));
+
+function frankenSplice(arr1, arr2, n) {
+  // It's alive. It's alive!
+  var splitA = arr2.slice(0, n);
+
   var splitB = arr2.slice(n);
-  
+
   var midP = arr1;
-  
-  return splitA.concat(midP,splitB);
-    return arr2;
-  }
-  
-  frankenSplice([1, 2, 3], [4, 5, 6], 1);
 
-  //javascript array can hold different data types
-  let yourArray = ['sarthak', 55, true, 'flower', 44.5]; // change this line
+  return splitA.concat(midP, splitB);
+  return arr2;
+}
 
-  //changing values of array
-  let myArray = ["a", "b", "c", "d"];
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+//javascript array can hold different data types
+let yourArray = ["sarthak", 55, true, "flower", 44.5]; // change this line
+
+//changing values of array
+let myArray = ["a", "b", "c", "d"];
 // change code below this line
-myArray[1] = 'sarthak';
+myArray[1] = "sarthak";
 //change code above this line
 console.log(myArray);
 
 //array push and unshift
 function mixedNumbers(arr) {
   // change code below this line
-arr.unshift('I', 2, 'three');
-arr.push(7, 'VIII', 9);
+  arr.unshift("I", 2, "three");
+  arr.push(7, "VIII", 9);
   // change code above this line
   return arr;
 }
 
 // do not change code below this line
-console.log(mixedNumbers(['IV', 5, 'six']));
+console.log(mixedNumbers(["IV", 5, "six"]));
 
 //pop and shift
 function popShift(arr) {
@@ -86,12 +83,12 @@ function popShift(arr) {
 }
 
 // do not change code below this line
-console.log(popShift(['challenge', 'is', 'not', 'complete']));
+console.log(popShift(["challenge", "is", "not", "complete"]));
 
 //removing array element from the middle array.splice
 function sumOfTen(arr) {
   // change code below this line
-  arr.splice(1,2);
+  arr.splice(1, 2);
   // change code above this line
   return arr.reduce((a, b) => a + b);
 }
@@ -102,31 +99,41 @@ console.log(sumOfTen([2, 5, 1, 5, 2, 1]));
 //add an item using splice
 function htmlColorNames(arr) {
   // change code below this line
-  arr.splice(0, 1, 'DarkSalmon', 'BlancedAlmond');
+  arr.splice(0, 1, "DarkSalmon", "BlancedAlmond");
   // change code above this line
   return arr;
-} 
- 
+}
+
 // do not change code below this line
-console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurqoise', 'FireBrick']));
+console.log(
+  htmlColorNames([
+    "DarkGoldenRod",
+    "WhiteSmoke",
+    "LavenderBlush",
+    "PaleTurqoise",
+    "FireBrick"
+  ])
+);
 
 //Array.slice copying array items
 function forecast(arr) {
   // change code below this line
-  let betterWeather = arr.slice(2,4);
-  console.log(betterWeather)
+  let betterWeather = arr.slice(2, 4);
+  console.log(betterWeather);
   return betterWeather;
 }
 
 // do not change code below this line
-console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+console.log(
+  forecast(["cold", "rainy", "warm", "sunny", "cool", "thunderstorms"])
+);
 
 //ES6 spread operator
 function copyMachine(arr, num) {
   let newArr = [];
   while (num >= 1) {
     // change code below this line
-  newArr.push([...arr]);
+    newArr.push([...arr]);
     // change code above this line
     num--;
   }
@@ -139,15 +146,15 @@ console.log(copyMachine([true, false, true], 2));
 //check presence of element using indexOf
 function quickCheck(arr, elem) {
   // change code below this line
-if (arr.indexOf(elem) >= 0) {
-  return true;
-}
-return false;
+  if (arr.indexOf(elem) >= 0) {
+    return true;
+  }
+  return false;
   // change code above this line
 }
 
 // change code here to test different cases:
-console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
 console.log(quickCheck(["squash", "onions", "shallots"], "onions"));
 console.log(quickCheck([3, 5, 9, 125, 45, 2], 125));
 
@@ -174,9 +181,9 @@ let foods = {
 
 // change code below this line
 Object.assign(foods, {
-bananas: 13,
-grapes: 35,
-strawberries: 27
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
 });
 // change code above this line
 
@@ -184,7 +191,7 @@ console.log(foods);
 
 let userActivity = {
   id: 23894201352,
-  date: 'January 1, 2017',
+  date: "January 1, 2017",
   data: {
     totalUsers: 51,
     online: 42
@@ -237,10 +244,10 @@ let users = {
 
 function isEveryoneHere(obj) {
   // change code below this line
-if (users.hasOwnProperty('Alan', 'Jeff', 'Sarah', 'Ryan') == true) {
-  return true;
-} 
-return false;
+  if (users.hasOwnProperty("Alan", "Jeff", "Sarah", "Ryan") == true) {
+    return true;
+  }
+  return false;
   // change code above this line
 }
 
@@ -267,7 +274,7 @@ let users = {
 
 function getArrayOfUsers(obj) {
   // change code below this line
-return Object.keys(obj);
+  return Object.keys(obj);
   // change code above this line
 }
 
@@ -275,44 +282,40 @@ console.log(getArrayOfUsers(users));
 
 //modify array stored in an object
 let user = {
-  name: 'Kenneth',
+  name: "Kenneth",
   age: 28,
   data: {
-    username: 'kennethCodesAllDay',
-    joinDate: 'March 26, 2016',
-    organization: 'freeCodeCamp',
-    friends: [
-      'Sam',
-      'Kira',
-      'Tomo'
-    ],
+    username: "kennethCodesAllDay",
+    joinDate: "March 26, 2016",
+    organization: "freeCodeCamp",
+    friends: ["Sam", "Kira", "Tomo"],
     location: {
-      city: 'San Francisco',
-      state: 'CA',
-      country: 'USA'
+      city: "San Francisco",
+      state: "CA",
+      country: "USA"
     }
   }
 };
 
 function addFriend(userObj, friend) {
-  // change code below this line  
+  // change code below this line
   userObj.data.friends.push(friend);
   return userObj.data.friends;
   // change code above this line
 }
 
-console.log(addFriend(user, 'Pete'));
+console.log(addFriend(user, "Pete"));
 
 function mixedNumbers(arr) {
   // change code below this line
-arr.unshift('I', 2, 'three');
-arr.push(7, 'VIII', 9);
+  arr.unshift("I", 2, "three");
+  arr.push(7, "VIII", 9);
   // change code above this line
   return arr;
 }
 
 // do not change code below this line
-console.log(mixedNumbers(['IV', 5, 'six']));
+console.log(mixedNumbers(["IV", 5, "six"]));
 
 function popShift(arr) {
   let popped = arr.pop();
@@ -321,9 +324,9 @@ function popShift(arr) {
 }
 
 // do not change code below this line
-console.log(popShift(['challenge', 'is', 'not', 'complete']));
+console.log(popShift(["challenge", "is", "not", "complete"]));
 
-let array = ['today', 'was', 'not', 'so', 'great'];
+let array = ["today", "was", "not", "so", "great"];
 
 array.splice(2, 2);
 // remove 2 elements beginning with the 3rd element
@@ -333,7 +336,7 @@ console.log(array);
 
 function sumOfTen(arr) {
   // change code below this line
-  arr.splice(1,2);
+  arr.splice(1, 2);
   // change code above this line
   return arr.reduce((a, b) => a + b);
 }
@@ -343,28 +346,38 @@ console.log(sumOfTen([2, 5, 1, 5, 2, 1]));
 
 function htmlColorNames(arr) {
   // change code below this line
-  arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond')
+  arr.splice(0, 2, "DarkSalmon", "BlanchedAlmond");
   // change code above this line
   return arr;
-} 
- 
+}
+
 // do not change code below this line
-console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurqoise', 'FireBrick']));
+console.log(
+  htmlColorNames([
+    "DarkGoldenRod",
+    "WhiteSmoke",
+    "LavenderBlush",
+    "PaleTurqoise",
+    "FireBrick"
+  ])
+);
 
 function forecast(arr) {
   // change code below this line
 
-  return arr.slice(2,4);
+  return arr.slice(2, 4);
 }
 
 // do not change code below this line
-console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+console.log(
+  forecast(["cold", "rainy", "warm", "sunny", "cool", "thunderstorms"])
+);
 
 function copyMachine(arr, num) {
   let newArr = [];
   while (num >= 1) {
     // change code below this line
-newArr.push([...arr]);
+    newArr.push([...arr]);
     // change code above this line
     num--;
   }
@@ -375,8 +388,8 @@ newArr.push([...arr]);
 console.log(copyMachine([true, false, true], 2));
 
 function spreadOut() {
-  let fragment = ['to', 'code'];
-  let sentence = ['learning', ...fragment, 'is', 'fun']
+  let fragment = ["to", "code"];
+  let sentence = ["learning", ...fragment, "is", "fun"];
   return sentence;
 }
 
@@ -385,24 +398,24 @@ console.log(spreadOut());
 
 function quickCheck(arr, elem) {
   // change code below this line
-if (arr.indexOf(elem) !== -1) {
-  return true;
-}
-return false;
+  if (arr.indexOf(elem) !== -1) {
+    return true;
+  }
+  return false;
   // change code above this line
 }
 
 // change code here to test different cases:
-console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
 
 function filteredArray(arr, elem) {
   let newArr = [];
   // change code below this line
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i].indexOf(elem) == -1) {
-    newArr.push(arr[i])
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].indexOf(elem) == -1) {
+      newArr.push(arr[i]);
+    }
   }
-}
   // change code above this line
   return newArr;
 }

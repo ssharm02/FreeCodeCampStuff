@@ -9,18 +9,17 @@ Remember to use Read-Search-Ask if you get stuck. Try to pair program. Write you
 Sarthak Sharma ssharm02
 */
 
-
 function sumAll(arr) {
-var sum = 0;
-//apply finds max or min number
-//use mat.max and math.min to find the high and lowest number
-//in the array
-var max = Math.max.apply(null, arr);
-var min = Math.min.apply(null, arr);
+  let sum = 0;
+  //apply finds max or min number
+  //use mat.max and math.min to find the high and lowest number
+  //in the array
+  let max = Math.max.apply(null, arr);
+  let min = Math.min.apply(null, arr);
   //iterate through min and max using for loop and add it to the
   //sum
-  for (var i = min; i <= max; i++) {
+  for (let i = min; i <= max; i++) {
     sum += i;
-}
+  }
   return sum;
 }

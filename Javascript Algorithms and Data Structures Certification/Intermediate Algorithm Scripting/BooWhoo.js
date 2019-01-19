@@ -8,12 +8,10 @@ Boolean primitives are true and false.
 function booWho(bool) {
   //checks if typeof returns boolean
   //typeof checks vlaue type
-  if(typeof(bool)==="boolean") {
+  if (typeof bool === "boolean") {
     return true;
-  }
-  else {
+  } else {
     //typeof is not boolean
     return false;
   }
-
 }

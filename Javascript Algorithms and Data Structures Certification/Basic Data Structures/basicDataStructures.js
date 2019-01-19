@@ -41,14 +41,14 @@ console.log(addFriend(user, "Pete"));
 
 function frankenSplice(arr1, arr2, n) {
   // It's alive. It's alive!
-  var splitA = arr2.slice(0, n);
+  let splitA = arr2.slice(0, n);
 
-  var splitB = arr2.slice(n);
+  let splitB = arr2.slice(n);
 
-  var midP = arr1;
+  let midP = arr1;
 
   return splitA.concat(midP, splitB);
-  return arr2;
+  // return arr2;
 }
 
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
@@ -373,20 +373,6 @@ console.log(
   forecast(["cold", "rainy", "warm", "sunny", "cool", "thunderstorms"])
 );
 
-function copyMachine(arr, num) {
-  let newArr = [];
-  while (num >= 1) {
-    // change code below this line
-    newArr.push([...arr]);
-    // change code above this line
-    num--;
-  }
-  return newArr;
-}
-
-// change code here to test different cases:
-console.log(copyMachine([true, false, true], 2));
-
 function spreadOut() {
   let fragment = ["to", "code"];
   let sentence = ["learning", ...fragment, "is", "fun"];
@@ -412,13 +398,19 @@ function filteredArray(arr, elem) {
   let newArr = [];
   // change code below this line
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i].indexOf(elem) == -1) {
+    if (arr[i].indexOf(elem) === -1) {
+      console.log("tst");
       newArr.push(arr[i]);
     }
   }
-  // change code above this line
+  // chan;ge code above this line
   return newArr;
 }
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
 
 // change code here to test different cases:
-console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+let arrayX = [[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]];
+let elementX = 3;
+const filteredArray2 = (arr, elem) => arr.filter(a => !a.includes(elem));
+
+console.log(filteredArray2(arrayX, elementX));

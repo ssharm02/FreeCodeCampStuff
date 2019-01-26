@@ -91,6 +91,7 @@ const squareList = arr => {
   // need to review chaining
   const squaredIntegers = arr
     .filter(number => number % 1 === 0)
+    .filter(x => x > 0)
     .map(elem => elem * elem);
 
   console.log(squaredIntegers);

@@ -1,4 +1,5 @@
 //Array Concat property
+//Conact Joins two arrays
 
 let example1 = [1, 2, 3, 4];
 let example2 = [5, 7, 7, 8];
@@ -26,7 +27,7 @@ for (let i = 0; i < example.length; i++) {
   iterator.next().value;
   console.log(iterator);
 }
-//Array Every function
+//Array Every function - check each element in the array
 
 let example = [1, 2, 3, 4, 5].every(element => {
   return element > 1;

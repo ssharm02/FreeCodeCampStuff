@@ -26,14 +26,16 @@ console.log(factorialize(5));
 
 //Use while loop
 function factor2(num) {
+  let result = num;
+
   if (num === 1 || num === 0) {
     return 1;
   }
-  while (num >= 1) {
+  while (num > 1) {
     num--;
-    num = num * num;
+    result = num * num;
   }
-  return num;
+  return result;
 }
 
 console.log(factor2(5));

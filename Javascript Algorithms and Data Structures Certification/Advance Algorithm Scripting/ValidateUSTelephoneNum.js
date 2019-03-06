@@ -16,7 +16,7 @@ Your job is to validate or reject the US phone number based on any combination o
 
 */
 function telephoneCheck(str) {
-//Regular expressions ftw
- var regex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
+  //Regular expressions ftw
+  var regex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
   return regex.test(str);
 }

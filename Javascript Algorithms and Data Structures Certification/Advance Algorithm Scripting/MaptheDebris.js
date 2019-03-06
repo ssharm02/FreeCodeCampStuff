@@ -18,13 +18,14 @@ function orbitalPeriod(arr) {
   var earthRadius = 6367.4447;
   for (var i = 0; i < arr.length; i++) {
     //write the formula that performs the calculation
-  var orbitalPer = Math.round(2*Math.PI*Math.sqrt(Math.pow(arr[i].avgAlt +   earthRadius, 3)/GM));
-    
+    var orbitalPer = Math.round(
+      2 * Math.PI * Math.sqrt(Math.pow(arr[i].avgAlt + earthRadius, 3) / GM)
+    );
+
     //delete the avgAlt property
-   delete arr[i].avgAlt;
+    delete arr[i].avgAlt;
     //adding orbital
-   arr[i].orbitalPeriod = orbitalPer;
-    
-  }//end of for loop
+    arr[i].orbitalPeriod = orbitalPer;
+  } //end of for loop
   return arr;
 }

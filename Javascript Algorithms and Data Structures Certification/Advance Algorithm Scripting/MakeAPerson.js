@@ -1,4 +1,3 @@
-
 /*
 Make a Person 
 Fill in the object constructor with the following methods below:
@@ -19,8 +18,8 @@ Sarthak Sharma ssharm02
 
 */
 var Person = function(firstAndLast) {
-var fullName = firstAndLast;
-  
+  var fullName = firstAndLast;
+
   this.getFirstName = function() {
     return fullName.split(" ")[0];
   };

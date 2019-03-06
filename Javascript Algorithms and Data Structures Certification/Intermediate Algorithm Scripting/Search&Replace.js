@@ -14,10 +14,10 @@ with the word "dog", it should be replaced as "Dog"
 
 function myReplace(str, before, after) {
   //check to see if the first character in the string is upper case
- if (before.charAt(0)===before.charAt(0).toUpperCase()) {
-   //if the first character is uper case before, make the new one upper case as well
-   after = after.replace(after.charAt(0), after.charAt(0).toUpperCase());
- }
+  if (before.charAt(0) === before.charAt(0).toUpperCase()) {
+    //if the first character is uper case before, make the new one upper case as well
+    after = after.replace(after.charAt(0), after.charAt(0).toUpperCase());
+  }
   //swap the values in the return statement
   return str.replace(before, after);
 }

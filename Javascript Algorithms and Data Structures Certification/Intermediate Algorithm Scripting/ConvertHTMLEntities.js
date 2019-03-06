@@ -8,6 +8,11 @@ Sarthak Sharma ssharm02
 function convertHTML(str) {
   // &colon;&rpar;
   //regular expressions is used to replace HTML elements using the str.replace
-str = str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,"&apos;");
+  str = str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
   return str;
 }

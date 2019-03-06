@@ -11,9 +11,9 @@ Sarthak Sharma ssharm02
 
 function titleCase(str) {
   //turn the string to lower case
-  var turnLower = str.toLowerCase();
+  let turnLower = str.toLowerCase();
   //split the string and put it in an array
-  var stringArray = turnLower.split(' ');
+  let stringArray = turnLower.split(' ');
   //for loops
   for (var i = 0; i < stringArray.length; i++) {
      stringArray[i] = stringArray[i].charAt(0).toUpperCase() + stringArray[i].slice(1);

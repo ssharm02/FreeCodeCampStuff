@@ -22,3 +22,24 @@ function repeatStringNumTimes(str, num) {
 }
 
 console.log(repeatStringNumTimes("sarthak", 2));
+
+
+function repeatStringNumTimes(str, num) {
+  // repeat after me
+  const emptyStr = '';
+  let newStr = '';
+  if (num <= 0) {
+    return emptyStr;
+  }
+  for (let i = 1; i <= num; i++) {
+    console.log(i)
+    newStr += str;
+  }
+  //  while (num > 1) {
+  //    newStr += str;
+  //    num--;
+  //  }
+  return newStr;
+}
+
+console.log(repeatStringNumTimes("abc", 3));

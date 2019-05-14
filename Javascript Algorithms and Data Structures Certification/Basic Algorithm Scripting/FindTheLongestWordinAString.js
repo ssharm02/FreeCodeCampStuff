@@ -11,7 +11,7 @@ Sarthak Sharma ssharm02
 
 function findLongestWord(str) {
   //split the string and place it into array
-  let splitArray = str.toString().split(",");
+  let splitArray = str.toString().split(" ");
   //max word counts the length of the words inside the for loop
   let maxWord = 0;
 

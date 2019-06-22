@@ -7,8 +7,15 @@ This challenge can be solved with the .endsWith() method, which was introduced i
 Sarthak Sharma ssharm02
 */
 function confirmEnding(str, target) {
+
   // "Never give up and good luck will find you."
   // -- Falcor
-
-  return str.slice(-target.length)===target;
+  let targetLength = target.length;
+  let strSub = str.slice(-targetLength);
+  if (strSub === target) {
+    return true;
+  }
+  return false;
 }
+  //return str.slice(-target.length)===target;
+

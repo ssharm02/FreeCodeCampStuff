@@ -15,7 +15,7 @@ function titleCase(str) {
   //split the string and put it in an array
   let stringArray = turnLower.split(' ');
   //for loops
-  for (var i = 0; i < stringArray.length; i++) {
+  for (let i = 0; i < stringArray.length; i++) {
      stringArray[i] = stringArray[i].charAt(0).toUpperCase() + stringArray[i].slice(1);
   }
   

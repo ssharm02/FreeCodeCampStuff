@@ -20,3 +20,19 @@ function truncateString(str, num) {
 
   return str;
 }
+
+//Another algorithm
+
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
+  let strLength = str.length;
+  let dot = '...'
+  let newStr = str;
+  if (strLength > num) {
+    newStr = str.slice(0, num)
+    newStr += dot;
+    return newStr;
+  } 
+  
+  return str;
+}
